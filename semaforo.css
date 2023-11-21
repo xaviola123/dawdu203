@@ -1,0 +1,65 @@
+#container{
+    background-color: black;
+    float: left;
+    
+    width: 30%;
+    margin: auto;
+}
+.semaforoCoches {
+    width: 100px;
+    height: 350px;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ccc; /* Fondo gris */
+}
+
+.luz {
+    width: 80px;
+    height: 80px;
+    border: 5px solid black;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+
+
+.semaforo-peatones {
+    width: 100px;
+    height: 150px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #ccc; /* Fondo gris */
+}
+
+.luz-peatones {
+    width: 70px;
+    height: 70px;
+    border: 5px solid black;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+
+button{
+    margin-top: 15px;
+    border: 5px solid black;
+    border-radius: 35%;
+    width: 70px;
+    height: 50px;
+    background-color: blueviolet;
+    text-align: center;
+}
+#encender{
+    background-color: green;
+}
+#apagar{
+    background-color: rgb(128, 2, 0);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambio de color de fondo con setInterval y gris</title>
+  <style>
+    p {
+      padding: 10px;
+      font-size: 16px;
+      transition: background-color 0.5s ease;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<p id="miParrafo">Este párrafo cambiará de color y luego se volverá gris.</p>
+
+<script>
+  // Obtener el elemento del párrafo por su ID
+  var miParrafo = document.getElementById("miParrafo");
+
+  // Arreglo de colores de fondo
+  var colores = ["#ff9999", "#99ff99", "#9999ff"];
+  var colorGris = "#cccccc";
+
+  // Contador de repeticiones
+  var repeticiones = 0;
+  var maxRepeticiones = 3; // Cambia esto al número deseado de repeticiones
+
+  // Establecer el intervalo para cambiar el color cada 2000 milisegundos (2 segundos)
+  var intervalo = setInterval(function() {
+    // Si aún no hemos alcanzado el máximo de repeticiones, cambiar el color
+    if (repeticiones < maxRepeticiones) {
+      miParrafo.style.backgroundColor = colores[repeticiones % colores.length];
+      repeticiones++;
+    } else {
+      // Si alcanzamos el máximo de repeticiones, poner el párrafo en gris y detener el intervalo
+      miParrafo.style.backgroundColor = colorGris;
+      clearInterval(intervalo);
+    }
+  }, 2000); // Cambiar cada 2000 milisegundos
+
+</script>
+
+</body>
+</html>
