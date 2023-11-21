@@ -1,6 +1,6 @@
 
-function carallo(){
+function holi(){
 echo "que es esto";
 };
 
-carallo();
+holi();
